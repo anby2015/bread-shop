@@ -13,7 +13,7 @@ class Product(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
 
     class Meta:
-        db_table = "products"
+        db_table = "catalog_products"
         ordering = ['-created_at']
 
     def __unicode__(self):
@@ -36,7 +36,7 @@ class Category(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
 
     class Meta:
-        db_table = "categories"
+        db_table = "catalog_categories"
         ordering = ['-created_at']
 
     def __unicode__(self):
