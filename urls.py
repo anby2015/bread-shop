@@ -6,8 +6,10 @@ admin.autodiscover()
 
 urlpatterns = patterns('bread.catalog.views',
     # Examples:
-    url(r'^', include('bread.catalog.urls')),
-    url(r'^cart/', include('bread.cart.urls')),
+    url(r'^', include('catalog.urls')),
+    url(r'^cart/', include('cart.urls')),
+    url(r'^accounts/', include('accounts.urls')),
+    url(r'^accounts/', include('django.contrib.auth.urls')),
     #url(r'^$', 'bread.views.home', name='home'),
     #url(r'^bread/', include('bread.foo.urls')),
 
