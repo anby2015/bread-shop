@@ -9,6 +9,8 @@ ADMINS = (
 )
 
 SITE_NAME = 'Bakery'
+META_KEYWORDS = 'Music, instruments, sheet music, musician'
+META_DESCRIPTION = 'Modern Musician is an online supplier of instruments, sheet music, and other accessories for musicians'
 
 MANAGERS = ADMINS
 
@@ -97,6 +99,18 @@ TEMPLATE_LOADERS = (
     'django.template.loaders.app_directories.Loader',
 #     'django.template.loaders.eggs.Loader',
 )
+# List of processors used by RequestContext to populate the context.
+# Each one should be a callable that takes the request object as its
+# only parameter and returns a dictionary to add to the context.
+TEMPLATE_CONTEXT_PROCESSORS = (
+#    'django.core.context_processors.auth',         # origin
+    'django.contrib.auth.context_processors.auth',  # 1.3, not proved.
+    'django.core.context_processors.debug',
+    'django.core.context_processors.i18n',
+    'django.core.context_processors.media',
+    'django.core.context_processors.static',
+    'bread.utils.context_processors.bread',
+)
 
 MIDDLEWARE_CLASSES = (
     'django.middleware.common.CommonMiddleware',
@@ -128,6 +142,7 @@ INSTALLED_APPS = (
     # 'django.contrib.admindocs',
     'bread.catalog',
     'bread.checkout',
+    'bread.utils',
 )
 
 # A sample logging configuration. The only tangible logging
