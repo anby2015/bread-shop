@@ -1,6 +1,6 @@
 from django.contrib import admin
 from catalog.forms import ProductAdminForm
-from catalog.models import Product, Category
+from catalog.models import Product, Category, ProductReview
 
 __author__ = 'leroy'
 
@@ -27,3 +27,12 @@ class CategoryAdmin(admin.ModelAdmin):
     prepopulated_fields = {'slug':('name',)}
 
 admin.site.register(Category, CategoryAdmin)
+
+class ProductReviewAdmin(admin.ModelAdmin):
+    list_display = ('product', 'user', 'title', 'date', 'rating', 'is_approved')
+    list_per_page = 20
+    list_filter = ('product', 'user', 'is_approved')
+    ordering = ['date']
+    search_fields = ['user','content','title']
+
+admin.site.register(ProductReview, ProductReviewAdmin)
