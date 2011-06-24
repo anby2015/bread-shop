@@ -5,6 +5,9 @@
 	<link rel="Stylesheet" type="text/css" href="{{ MEDIA_URL }}style.css" />
 	<link rel="SHORTCUT ICON" href="{{ MEDIA_URL }}images/favicon.ico" />
 	<title>{% block title %}{% if page_title %}{{ page_title }} - {% endif %}{{ site_name }}{% endblock %}</title>
+	<meta name="keywords" content="{{ meta_keywords }}" />
+	<meta name="description" content="{{ meta_description }}" />
+	<meta name="verify-v1" content="bPjaC6MIttNNSgZfZXROVZ4RPbKJkyv7rAM2sOuUWk0=" />
 </head>
 <body>
 	{% block site_wrapper %}{% endblock %}
