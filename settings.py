@@ -142,6 +142,7 @@ INSTALLED_APPS = (
     # 'django.contrib.admindocs',
     'bread.catalog',
     'bread.checkout',
+    'bread.cart',
     'bread.utils',
 )
 
