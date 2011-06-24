@@ -127,8 +127,8 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.common.CommonMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
-    'django.contrib.csrf.middleware.CsrfMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
+    'django.middleware.csrf.CsrfResponseMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'bread.SSLMiddleware.SSLRedirect',
 )
