@@ -1,5 +1,5 @@
 from django.contrib import admin
-from cart.models import UserPreSelectCartItem, UserPredefinedCart
+from bread.cart.models import UserPreSelectCartItem, UserPredefinedCart
 
 __author__ = 'leroy'
 

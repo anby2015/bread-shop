@@ -40,6 +40,14 @@ LANGUAGE_CODE = 'en-us'
 
 SITE_ID = 1
 
+PRODUCTS_PER_PAGE = 1
+PRODUCTS_PER_ROW = 4
+
+LOGIN_REDIRECT_URL = '/accounts/my_account/'
+
+SESSION_COOKIE_DAYS = 90
+SESSION_COOKIE_AGE = 60 * 60 * 24 * SESSION_COOKIE_DAYS 
+
 # If you set this to False, Django will make some optimizations so as not
 # to load the internationalization machinery.
 USE_I18N = True
@@ -50,6 +58,9 @@ USE_L10N = True
 
 # CURRENT_PATH = os.path.abspath('.').decode('utf-8').replace('\\','/')
 CURRENT_PATH = os.path.abspath(os.path.dirname(__file__).decode('utf-8'))
+
+# Upon deployment, change to True
+ENABLE_SSL = False
 
 # Absolute filesystem path to the directory that will hold user-uploaded files.
 # Example: "/home/media/media.lawrence.com/media/"
@@ -115,9 +126,11 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 MIDDLEWARE_CLASSES = (
     'django.middleware.common.CommonMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'django.contrib.csrf.middleware.CsrfMiddleware',
+    'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
+    'bread.SSLMiddleware.SSLRedirect',
 )
 
 ROOT_URLCONF = 'bread.urls'
@@ -140,6 +153,7 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
+    'bread.accounts',
     'bread.catalog',
     'bread.checkout',
     'bread.cart',
