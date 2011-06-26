@@ -153,11 +153,11 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
-    'bread.accounts',
-    'bread.catalog',
-    'bread.checkout',
-    'bread.cart',
-    'bread.utils',
+    'accounts',
+    'catalog',
+    'checkout',
+    'cart',
+    'utils',
 )
 
 # A sample logging configuration. The only tangible logging
