@@ -3,10 +3,10 @@ import profile
 from django.contrib.auth.decorators import login_required
 from django.core import urlresolvers
 from django.http import HttpResponseRedirect
-from django.shortcuts import render_to_response
+from django.shortcuts import render_to_response, get_object_or_404
 from django.template.context import RequestContext
 from accounts.forms import RegistrationForm, UserProfileForm
-from checkout.models import Order
+from checkout.models import Order, OrderItem
 
 def register(request, template_name="registration/register.html"):
     """ view displaying customer registration form """
@@ -54,4 +54,15 @@ def order_info(request, template_name="registration/order_info.html"):
         user_profile = profile.retrieve(request)
         form = UserProfileForm(instance=user_profile)
     page_title = 'Edit Order Information'
+    return render_to_response(template_name, locals(), context_instance=RequestContext(request))
+
+@login_required
+def order_details(request, order_id, template_name="registration/order_details.html"):
+    """ displays the details of a past customer order; order details can only be loaded by the same
+    user to whom the order instance belongs.
+
+    """
+    order = get_object_or_404(Order, id=order_id, user=request.user)
+    page_title = 'Order Details for Order #' + order_id
+    order_items = OrderItem.objects.filter(order=order)
     return render_to_response(template_name, locals(), context_instance=RequestContext(request))
