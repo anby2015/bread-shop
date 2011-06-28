@@ -11,7 +11,6 @@ ADMINS = (
 SITE_NAME = 'Bakery'
 META_KEYWORDS = 'Music, instruments, sheet music, musician'
 META_DESCRIPTION = 'Modern Musician is an online supplier of instruments, sheet music, and other accessories for musicians'
-
 MANAGERS = ADMINS
 
 DATABASES = {
