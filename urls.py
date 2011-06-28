@@ -4,7 +4,7 @@ from django.conf.urls.defaults import patterns, include, url
 from django.contrib import admin
 admin.autodiscover()
 
-urlpatterns = patterns('bread.catalog.views',
+urlpatterns = patterns('catalog.views',
     # Examples:
     url(r'^', include('catalog.urls')),
     url(r'^cart/', include('cart.urls')),

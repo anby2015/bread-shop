@@ -3,7 +3,7 @@ from django.conf.urls.defaults import *
 
 __author__ = 'leroy'
 
-urlpatterns = patterns('bread.accounts.views',
+urlpatterns = patterns('accounts.views',
 	url(r'^register/$', 'register', {'template_name': 'registration/register.html', 'SSL': settings.ENABLE_SSL }, 'register'),
 	url(r'^my_account/$', 'my_account', {'template_name': 'registration/my_account.html'}, 'my_account'),
 	url(r'^order_info/$', 'order_info', {'template_name': 'registration/order_info.html'}, 'order_info'),

@@ -125,7 +125,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'django.core.context_processors.i18n',
     'django.core.context_processors.media',
     'django.core.context_processors.static',
-    'bread.utils.context_processors.bread',
+    'utils.context_processors.bread',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -136,10 +136,10 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.csrf.CsrfResponseMiddleware',
     'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
-    'bread.SSLMiddleware.SSLRedirect',
+    'SSLMiddleware.SSLRedirect',
 )
 
-ROOT_URLCONF = 'bread.urls'
+ROOT_URLCONF = 'urls'
 
 TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
