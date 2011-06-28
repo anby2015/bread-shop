@@ -5,7 +5,7 @@ DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
-    # ('Your Name', 'your_email@example.com'),
+    ('leroy', 'lirui.zhu@gmail.com'),
 )
 
 SITE_NAME = 'Bakery'
@@ -18,7 +18,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
         'NAME': 'bread',                      # Or path to database file if using sqlite3.
         'USER': 'root',                       # Not used with sqlite3.
-        'PASSWORD': '',                       # Not used with sqlite3.
+        'PASSWORD': 'lnzwd88',                       # Not used with sqlite3.
         'HOST': 'localhost',                  # Set to empty string for localhost. Not used with sqlite3.
         'PORT': '3306',                       # Set to empty string for default. Not used with sqlite3.
     }
@@ -126,6 +126,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'django.core.context_processors.static',
     'utils.context_processors.bread',
 )
+
 
 MIDDLEWARE_CLASSES = (
     'django.middleware.common.CommonMiddleware',
