@@ -2,7 +2,7 @@ from django.conf.urls.defaults import patterns
 
 __author__ = 'leroy'
 
-urlpatterns = patterns('bread.catalog.views',
+urlpatterns = patterns('catalog.views',
     (r'^$','index', {'template_name': 'catalog/index.html'}, 'catalog_home'),
 #    (r'^category/(?P<category_slug>[-\w]+)/$', 'show_category',
 #       {'template_name': 'catalog/category.html'}, 'catalog_category'),
