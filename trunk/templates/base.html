@@ -2,8 +2,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
 	<link rel="Stylesheet" type="text/css" href="{{ STATIC_URL }}style.css" />
+    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}blueprint/screen.css" media="screen, projection">
+    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}blueprint/print.css" media="print">
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}blueprint/ie.css" media="screen, projection">
+    <![endif]-->
+
 	<link rel="SHORTCUT ICON" href="{{ MEDIA_URL }}images/favicon.ico" />
+
 	<title>{% block title %}{% if page_title %}{{ page_title }} - {% endif %}{{ site_name }}{% endblock %}</title>
 	<meta name="keywords" content="{{ meta_keywords }}" />
 	<meta name="description" content="{{ meta_description }}" />
