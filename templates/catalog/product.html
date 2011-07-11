@@ -1,0 +1,16 @@
+{% extends "catalog/index.html" %}
+
+{% block content %}
+        {% for i in 0123456789|make_list%}
+            <div class="span-20 last">
+                <h3 class="span-16 last">Product {{ i }} Title </h3>
+                <div class="span-16 last">
+                    <p>dskjf;lsadjf;lasdjf;lasdkjf;lasdkjf;lasdkjf;alsdkjfasl;d
+                asdfasldfjas;ldfkja;sldfjkasldkf';asdlkf';asdkf
+                asdfl;asdf;lkasd';flk
+                asdf';asdfads;lf</p>
+                </div>
+            </div>
+        {% endfor %}
+
+{% endblock %}

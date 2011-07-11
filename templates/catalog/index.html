@@ -1,6 +1,21 @@
 {% extends "catalog.html" %}
 
-{#{% load catalog_tags %}#}
+{% block side %}
+    <div class="span-4 last" style="border: 1px solid #ccc;width: 100%;">
+        <h3>Login Panel here</h3>
+        <form action="login" id="login_form">
+            <label><input id="username" type="text" value="username"></label>
+            <label><input id="password" type="password" value="password"></label>
+            <br>
+            <button type="submit" value="login">Login</button>
+            <button type="button" value="login">Register</button>
+        </form>
+    </div>
+    <div class="span-4 last" style="border: 1px solid #ccc;height: 100px;width: 100%;">
+        <img src="#" alt="Latest promotion">
+        Latest promotion here
+    </div>
+{% endblock %}
 
 {% block content %}
 <h1>Welcome</h1>

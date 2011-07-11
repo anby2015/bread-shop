@@ -1,9 +1,12 @@
 from django.conf.urls.defaults import patterns
+from django.template.defaulttags import url
 
 __author__ = 'leroy'
 
 urlpatterns = patterns('catalog.views',
     (r'^$','index', {'template_name': 'catalog/index.html'}, 'catalog_home'),
+    (r'^product/$', 'product', {'template_name': 'catalog/product.html'}, 'catalog_product'),
+    (r'^promotion/$', 'promotion', {'template_name': 'catalog/promotion.html'}, 'catalog_promotion'),
 #    (r'^category/(?P<category_slug>[-\w]+)/$', 'show_category',
 #       {'template_name': 'catalog/category.html'}, 'catalog_category'),
 #    (r'^product/(?P<product_slug>[-\w]+)/$', 'show_product',
