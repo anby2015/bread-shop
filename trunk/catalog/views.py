@@ -11,3 +11,6 @@ def product(request, template_name="catalog/product.html"):
 
 def promotion(request, template_name="catalog/promotion.html"):
     return render_to_response(template_name, locals(), context_instance=RequestContext(request))
+
+def about(request, template_name="catalog/about.html"):
+    return render_to_response(template_name, locals(), context_instance=RequestContext(request))

@@ -2,13 +2,24 @@
 
 {% block content %}
         {% for i in 0123456789|make_list%}
-            <div class="span-20 last">
-                <h3 class="span-16 last">Product {{ i }} Title </h3>
-                <div class="span-16 last">
+            <div class="span-18 last product">
+                <div class="span-5">
+                    <img class="image" src="{{ MEDIA_URL }}images/bread/country_sourdough.jpg" alt="country sourdough">
+                </div>
+                <div class="append-1 prepend-1 span-10 last content">
+                    <h3>Product {{ i }} Title </h3>
                     <p>dskjf;lsadjf;lasdjf;lasdkjf;lasdkjf;lasdkjf;alsdkjfasl;d
                 asdfasldfjas;ldfkja;sldfjkasldkf';asdlkf';asdkf
                 asdfl;asdf;lkasd';flk
-                asdf';asdfads;lf</p>
+                asdf';asdfads;lfdsfasdfasdfasdfasdf
+                        asdfasdfasdf
+                        asdfasdfasdfasdf
+                        asdfasdf
+                        asdfasdf
+                        asdfasdf
+                        asdfasdf
+                        asdf
+                    </p>
                 </div>
             </div>
         {% endfor %}
