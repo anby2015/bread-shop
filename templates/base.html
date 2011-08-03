@@ -3,14 +3,18 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-	<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}style.css"            media="screen, projection"/>
     <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}blueprint/screen.css" media="screen, projection"/>
+    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}style.css"            media="screen, projection"/>
     <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}blueprint/print.css"  media="print"/>
     <!--[if lt IE 8]>
     <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}blueprint/ie.css" media="screen, projection">
     <![endif]-->
 
+    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}style.css"  media="print"/>
+
 	<link rel="ico" type="image/ico" href="{{ MEDIA_URL }}images/favicon.ico" />
+
+    <script type="text/javascript" src="{{STATIC_URL}}jquery/jquery-1.6.2.min.js" ></script>
 
 	<title>{% block title %}{% if page_title %}{{ page_title }} - {% endif %}{{ site_name }}{% endblock %}</title>
 	<meta name="keywords"    content="{{ meta_keywords }}" />
